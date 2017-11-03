@@ -61,3 +61,9 @@ Not all browsers natively support [IntersectionObserver](https://caniuse.com/#se
 - Run `npm install lazy-loading-img --save`
 - Add `{ name: 'lazy-loading-img' }` to your [collections](https://github.com/ionic-team/stencil-starter/blob/master/stencil.config.js#L5)
 - Then you can use the element anywhere in your template, JSX, html etc
+
+### HTML
+
+```
+<lazy-loading-img src="http://placehold.it/400x300" alt="Lorem ipsum"></lazy-loading-img>
+```
