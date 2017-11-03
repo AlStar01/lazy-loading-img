@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'lazyloadingimg',
   generateDistribution: true,
   bundles: [
-    { components: ['my-component'] }
+    { components: ['lazy-loading-img'] }
   ]
 };
 

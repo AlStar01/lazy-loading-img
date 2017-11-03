@@ -4,28 +4,28 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import { MyComponent as MyComponent } from './components/my-component/my-component';
+import { LazyLoadingImg as LazyLoadingImg } from './components/lazy-loading-img/lazy-loading-img';
 
-interface HTMLMyComponentElement extends MyComponent, HTMLElement {
+interface HTMLLazyLoadingImgElement extends LazyLoadingImg, HTMLElement {
 }
-declare var HTMLMyComponentElement: {
-  prototype: HTMLMyComponentElement;
-  new (): HTMLMyComponentElement;
+declare var HTMLLazyLoadingImgElement: {
+  prototype: HTMLLazyLoadingImgElement;
+  new (): HTMLLazyLoadingImgElement;
 };
 declare global {
   interface HTMLElementTagNameMap {
-      "my-component": HTMLMyComponentElement;
+      "lazy-loading-img": HTMLLazyLoadingImgElement;
   }
   interface ElementTagNameMap {
-      "my-component": HTMLMyComponentElement;
+      "lazy-loading-img": HTMLLazyLoadingImgElement;
   }
   namespace JSX {
       interface IntrinsicElements {
-          "my-component": JSXElements.MyComponentAttributes;
+          "lazy-loading-img": JSXElements.LazyLoadingImgAttributes;
       }
   }
   namespace JSXElements {
-      export interface MyComponentAttributes extends HTMLAttributes {
+      export interface LazyLoadingImgAttributes extends HTMLAttributes {
           mode?: string,
           color?: string,
         

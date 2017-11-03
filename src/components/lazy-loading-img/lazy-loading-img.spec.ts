@@ -1,17 +1,17 @@
 import { flush, render } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { LazyLoadingImg } from './lazy-loading-img';
 
-describe('my-component', () => {
+describe('lazy-loading-img', () => {
   it('should build', () => {
-    expect(new MyComponent()).toBeTruthy();
+    expect(new LazyLoadingImg()).toBeTruthy();
   });
 
   describe('rendering', () => {
     let element;
     beforeEach(async () => {
       element = await render({
-        components: [MyComponent],
-        html: '<my-component></my-component>'
+        components: [LazyLoadingImg],
+        html: '<lazy-loading-img></lazy-loading-img>'
       });
     });
 

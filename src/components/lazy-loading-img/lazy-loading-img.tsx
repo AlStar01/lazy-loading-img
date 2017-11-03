@@ -1,11 +1,11 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.scss',
+  tag: 'lazy-loading-img',
+  styleUrl: 'lazy-loading-img.scss',
   shadow: true
 })
-export class MyComponent {
+export class LazyLoadingImg {
 
   @Prop() first: string;
   @Prop() last: string;
