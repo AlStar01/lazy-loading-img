@@ -12,6 +12,7 @@ export class LazyLoadingImg {
   @Prop() alt: string;
 
   @State() full: boolean;
+  @State() loaded: boolean;
 
   private io: IntersectionObserver;
 
@@ -27,10 +28,14 @@ export class LazyLoadingImg {
     this.io.unobserve(this.lazyLoadingImgEl);
   }
 
+  _handleLoad(): void {
+    this.loaded = true;
+  }
+
   private _init() {
     this.io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if(entry['isIntersecting'] && !this.full) {
+        if(!this.loaded && entry['isIntersecting']) {
           this.full = true;
         }
       });
@@ -41,7 +46,7 @@ export class LazyLoadingImg {
     return (
       <div>
         {this.full &&
-          <img src={this.src} alt={this.alt} />
+          <img src={this.src} alt={this.alt} onLoad={ _ => this._handleLoad() } />
         }
       </div>
     );
