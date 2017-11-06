@@ -33,7 +33,7 @@ npm test
 
 Not all browsers natively support [IntersectionObserver](https://caniuse.com/#search=IntersectionObserver). This can be supported with a polyfill such as [Polyfill.io](https://polyfill.io).
 
-```
+```html
 <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver,IntersectionObserverEntry"></script>
 ```
 
@@ -54,7 +54,7 @@ Not all browsers natively support [IntersectionObserver](https://caniuse.com/#se
 
 ### HTML
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

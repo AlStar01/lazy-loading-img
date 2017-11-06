@@ -1,6 +1,6 @@
 {
   "name": "lazy-loading-img",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Web component to lazy load images using Intersection Observer",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
